@@ -1,0 +1,6 @@
+﻿id_pago,metodo_pago
+1,EFECTIVO
+2,PAYPAL
+3,PUNTOS
+4,TARJETA
+5,TRANSFERENCIA
