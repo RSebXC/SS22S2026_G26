@@ -1,4 +1,4 @@
-"""Dispara una ejecución y verifica que el scheduler real complete sus tareas."""
+"""Dispara una ejecución y verifica que el scheduler complete sus tareas."""
 import json
 import os
 import subprocess

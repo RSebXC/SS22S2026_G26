@@ -1,4 +1,4 @@
--- Cada fila representa una conciliación reproducible, no una cifra esperada fija.
+-- Cada fila compara dos totales calculados; no hay cifras esperadas fijas.
 WITH comprobaciones AS (
     SELECT 'lineas_venta' AS check_name,
         (SELECT count(*) FROM raw.venta_detalle)::numeric AS expected,

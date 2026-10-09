@@ -1,4 +1,4 @@
-"""Ejecuta el DAG real en modo de prueba y registra tareas y estado final."""
+"""Ejecuta el DAG con airflow dags test y registra el estado de cada tarea."""
 import json
 import subprocess
 from datetime import datetime, timezone
@@ -22,7 +22,7 @@ with psycopg2.connect(dsn) as connection, connection.cursor() as cursor:
     cursor.execute("SELECT task_id,state,try_number FROM task_instance WHERE dag_id='sgfood_elt' AND run_id=%s ORDER BY start_date", (result['run_id'],))
     result['tasks'] = [dict(zip(['task_id','state','try_number'],row)) for row in cursor.fetchall()]
 result['command_exit_code'] = run.returncode
-result['verification_mode'] = 'airflow dags test: ejecución real de operadores; scheduler verificado por separado'
+result['verification_mode'] = 'airflow dags test; el scheduler se verifica por separado'
 result['generated_at_utc'] = datetime.now(timezone.utc)
 save_json('dag_ejecucion.json',result)
 print(json.dumps({'state':result['state'],'tasks':len(result['tasks']),'exit_code':run.returncode}))

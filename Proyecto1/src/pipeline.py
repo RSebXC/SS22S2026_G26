@@ -1,4 +1,4 @@
-"""Carga transaccional de fuentes reales hacia PostgreSQL raw."""
+"""Extracción, carga a raw y validaciones del pipeline."""
 import argparse
 import csv
 import hashlib

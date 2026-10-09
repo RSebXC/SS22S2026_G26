@@ -1,8 +1,8 @@
-# Proyecto 1 — Flujo de datos de SG-Food
+# Proyecto 1: flujo de datos de SG-Food
 
-**Seminario de Sistemas 2, sección N — Grupo 26 — USAC.**
+**Seminario de Sistemas 2, sección N. Grupo 26. USAC.**
 
-Solución ELT para ventas e inventarios con **Python, Apache Airflow, dbt Core y PostgreSQL**. Usa la base transaccional y los CSV ficticios de `Data-20260930.zip`, conserva datos crudos, construye un modelo dimensional y comprueba su calidad e integridad.
+Solución ELT para ventas e inventarios con **Python, Apache Airflow, dbt Core y PostgreSQL**. Usa la base transaccional y los CSV ficticios de `Data-20260930.zip`, guarda los datos crudos, construye un modelo dimensional y lo valida con pruebas.
 
 ## Integrantes
 
@@ -13,14 +13,12 @@ Solución ELT para ventas e inventarios con **Python, Apache Airflow, dbt Core y
 
 Datos de los integrantes registrados en [SS22S2026_G26.pdf](../SS22S2026_G26.pdf), en la raíz del repositorio.
 
-**Entrega: miércoles 14 de octubre de 2026. Calificación presencial: 16 y 17 de octubre.** Se utilizan las fechas explícitas del aviso del curso, ya que el enunciado incluye una referencia general a 2026-1.
-
 ## Qué está implementado
 
-- Extracción de siete tablas desde una base PostgreSQL transaccional real y carga de cinco CSV operativos mediante Python.
+- Extracción de siete tablas desde una base PostgreSQL transaccional y carga de cinco CSV operativos mediante Python.
 - Carga raw atómica con metadatos de origen, lote, conteos y hashes; reejecución sin acumular duplicados.
 - 12 modelos de staging, dos intermediate y 17 marts: ocho dimensiones, cinco hechos, una tabla puente y tres reportes.
-- DAG `sgfood_elt` con ocho tareas, dependencias, reintentos, registro de errores y programación diaria configurable.
+- DAG `sgfood_elt` con ocho tareas, dependencias, reintentos y ejecución diaria a las 06:00 (pausada por defecto).
 - Pruebas dbt de unicidad, nulos, relaciones y reglas de negocio; PK/FK físicas y conciliaciones de conteos/importes.
 - Verificación de los diez casos inválidos del curso mediante consultas dbt compiladas, dentro de transacciones revertidas.
 - DDL del DW, consultas analíticas, documentación dbt, diagramas Mermaid editables y exportaciones CSV.
@@ -61,6 +59,105 @@ flowchart LR
     AF -. coordina .-> QA
 ```
 
+## DAG de Airflow
+
+DAG `sgfood_elt`, una ejecución activa a la vez y un reintento por tarea:
+
+```mermaid
+flowchart LR
+    A[verificar_fuentes] --> B[cargar_raw]
+    B --> C[validar_raw]
+    C --> D[dbt_build]
+    D --> E[aplicar_claves]
+    E --> F[conciliar_resultados]
+    F --> G[dbt_docs]
+    G --> H[exportar_marts]
+```
+
+| Tarea | Operador | Función |
+|---|---|---|
+| `verificar_fuentes` | Python | Valida encabezados de los CSV y conexión a las bases |
+| `cargar_raw` | Python | Carga atómica de las 12 tablas a `raw` y registra el lote en `audit.load_runs` |
+| `validar_raw` | Python | Compara conteos y lote cargados |
+| `dbt_build` | Bash | `dbt build`: modelos y pruebas |
+| `aplicar_claves` | Python | PK, FK y checks físicos sobre `marts` |
+| `conciliar_resultados` | Python | 11 conciliaciones de conteos e importes |
+| `dbt_docs` | Bash | `dbt docs generate` |
+| `exportar_marts` | Python | Exporta los marts a CSV |
+
+## Data Warehouse
+
+Esquema estrella en `marts`, construido con dbt: 8 dimensiones, 5 tablas de hechos, una tabla puente y 3 reportes. Las capas son `raw` (texto original con metadatos de carga), `staging` (tipado, vistas), `intermediate` (reglas de ventas y devoluciones) y `marts` (tablas). El DDL completo está en [sql/05_dw_ddl.sql](sql/05_dw_ddl.sql) y la justificación del diseño en [docs/arquitectura.md](docs/arquitectura.md).
+
+```mermaid
+erDiagram
+    DIM_FECHA ||--o{ FACT_VENTAS : fecha
+    DIM_PRODUCTO ||--o{ FACT_VENTAS : producto
+    DIM_CLIENTE ||--o{ FACT_VENTAS : cliente
+    DIM_SUCURSAL ||--o{ FACT_VENTAS : sucursal
+    DIM_CANAL ||--o{ FACT_VENTAS : canal
+    DIM_PAGO ||--o{ FACT_VENTAS : pago
+    DIM_FECHA ||--o{ FACT_INVENTARIO : corte_y_vencimiento
+    DIM_PRODUCTO ||--o{ FACT_INVENTARIO : producto
+    DIM_SUCURSAL ||--o{ FACT_INVENTARIO : sucursal
+    DIM_FECHA ||--o{ FACT_DEVOLUCIONES : fecha_devolucion
+    DIM_PRODUCTO ||--o{ FACT_DEVOLUCIONES : producto
+    DIM_CLIENTE o|--o{ FACT_DEVOLUCIONES : cliente_origen
+    DIM_SUCURSAL o|--o{ FACT_DEVOLUCIONES : sucursal_origen
+    DIM_FECHA ||--o{ FACT_METAS : inicio_mes
+    DIM_SUCURSAL ||--o{ FACT_METAS : sucursal
+    DIM_PRODUCTO ||--o{ FACT_PROVEEDOR_PRECIO : producto
+    DIM_PROVEEDOR ||--o{ FACT_PROVEEDOR_PRECIO : proveedor
+    DIM_FECHA ||--o{ FACT_PROVEEDOR_PRECIO : vigencia
+    FACT_VENTAS ||--o{ BRIDGE_PROMOCION_VENTA : linea_elegible
+    DIM_PROMOCION ||--o{ BRIDGE_PROMOCION_VENTA : promocion_potencial
+    FACT_VENTAS {
+        bigint venta_key PK
+        bigint id_venta
+        int fecha_key FK
+        int producto_key FK
+        int cliente_key FK
+        int sucursal_key FK
+        string canal_key FK
+        string pago_key FK
+        string estado
+        numeric importe_neto_vendido
+        numeric margen_estimado
+    }
+    FACT_INVENTARIO {
+        string inventario_key PK
+        int fecha_key FK
+        int vencimiento_fecha_key FK
+        int producto_key FK
+        int sucursal_key FK
+        string lote
+        int stock_disponible
+    }
+    FACT_DEVOLUCIONES {
+        bigint devolucion_key PK
+        int fecha_key FK
+        int producto_key FK
+        int cliente_key FK
+        int sucursal_key FK
+        boolean es_valida
+        numeric importe_devolucion_estimado
+    }
+    FACT_METAS {
+        string meta_key PK
+        int fecha_key FK
+        int sucursal_key FK
+        string periodo
+        numeric meta_ventas
+    }
+    FACT_PROVEEDOR_PRECIO {
+        string precio_key PK
+        int producto_key FK
+        int proveedor_key FK
+        int fecha_key FK
+        numeric costo_proveedor
+    }
+```
+
 ## Estructura
 
 ```text
@@ -79,7 +176,7 @@ Proyecto1/
 │   └── tests/
 ├── sql/                # Raw, restricciones, conciliaciones, consultas y DDL
 ├── tests/              # Pruebas del lector CSV
-├── evidence/           # Evidencia real en JSON y registros locales
+├── evidence/           # Evidencia de ejecución en JSON
 └── docs/               # Manual, diseño, diccionario, resultados y Mermaid
 ```
 
@@ -91,10 +188,6 @@ Proyecto1/
 - [Resultados y gráficas](docs/resultados.md).
 - [Verificación del flujo](docs/verificacion.md).
 
-El README y los documentos enlazados cubren la documentación técnica admitida por el enunciado.
-
 ## Límites del análisis
 
 Las ventas solo cuentan operaciones completadas. El inventario no se suma entre cortes mensuales. Margen, valor de inventario y devolución monetaria se identifican como estimaciones por las limitaciones de los insumos. Las promociones indican elegibilidad por categoría/fecha; no se afirma que hayan causado una venta.
-
-Los nombres de las columnas y los conteos provienen de los datos reales: el SQL contiene **3,209 líneas de venta**, aunque el catálogo anuncia aproximadamente 3,840. No se inventaron registros para completar ese conteo.

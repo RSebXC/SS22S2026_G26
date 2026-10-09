@@ -1,4 +1,4 @@
-"""Inyecta un fallo de lectura al final de la carga y comprueba rollback real."""
+"""Inyecta un fallo de lectura al final de la carga y comprueba el rollback."""
 from datetime import datetime, timezone
 from unittest.mock import patch
 

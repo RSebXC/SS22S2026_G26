@@ -58,7 +58,7 @@ Las dimensiones con identificadores numéricos conservan la clave de la única f
 - Valorar devoluciones válidas proporcionalmente al subtotal/cantidad de la línea original. Verificar línea existente, estado, fechas y cantidad acumulada; conservar diagnósticos de inválidas y excluirlas de importes.
 - Comparar metas con ventas completadas, antes de devoluciones. Agregar ventas, devoluciones y metas por separado antes de unirlas por mes y sucursal.
 - La tabla puente de promociones representa coincidencia por categoría y fechas. Puede tener varias promociones por línea y no implica aplicación efectiva ni causalidad.
-- Las cotizaciones de proveedor no son compras ni costo real de cada venta; usar su fecha de vigencia en cualquier comparación.
+- Las cotizaciones de proveedor no son compras ni el costo de cada venta; usar su fecha de vigencia en cualquier comparación.
 
 ## Reejecución y errores
 

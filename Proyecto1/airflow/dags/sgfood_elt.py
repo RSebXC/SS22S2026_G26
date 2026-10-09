@@ -20,9 +20,8 @@ with DAG(
     max_active_runs=1,
     default_args={'owner': 'grupo26', 'retries': 1, 'retry_delay': timedelta(minutes=1)},
     tags=['proyecto1', 'sgfood', 'elt'],
-    doc_md='''Flujo reproducible con snapshot raw atómico, modelos y pruebas dbt,
-    restricciones físicas, conciliaciones y documentación. Los CSV de casos
-    inválidos no se cargan en la corrida principal. Ver docs/arquitectura.md.''',
+    doc_md='''Carga raw, modelos y pruebas dbt, claves físicas, conciliaciones y
+    documentación. casos_calidad_opcionales.csv no se carga. Ver docs/arquitectura.md.''',
 ) as dag:
     check = PythonOperator(task_id='verificar_fuentes', python_callable=check_sources)
     load = PythonOperator(task_id='cargar_raw', python_callable=load_raw)

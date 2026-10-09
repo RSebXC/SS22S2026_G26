@@ -1,6 +1,6 @@
 # Diccionario de datos original
 
-Extraído de catalogo_insumos_sgfood.xlsx. Se conserva el contenido documental; los conteos observados se registran por separado.
+Extraído de catalogo_insumos_sgfood.xlsx. Los conteos cargados están en verificacion.md.
 
 ## Resumen
 
@@ -86,7 +86,3 @@ Extraído de catalogo_insumos_sgfood.xlsx. Se conserva el contenido documental; 
 | CSV | devoluciones.csv | id_producto | INTEGER | FK lógica | Producto |
 | CSV | devoluciones.csv | cantidad | INTEGER |  | Cantidad |
 | CSV | devoluciones.csv | motivo | VARCHAR |  | Motivo |
-
-## Diferencia observada
-
-El resumen del catálogo anuncia aproximadamente 3,840 líneas de venta. El SQL contiene 3,209 filas en venta_detalle; se usa el SQL como fuente de verdad. El inventario sí contiene 3,840 posiciones. No se crean registros para completar el conteo aproximado.

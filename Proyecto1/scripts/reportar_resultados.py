@@ -1,4 +1,4 @@
-"""Genera evidencia y resultados a partir del DW efectivamente ejecutado."""
+"""Genera resultados y evidencia a partir del DW."""
 import json
 from collections import Counter
 from datetime import datetime, timezone
@@ -59,7 +59,7 @@ def main():
         return '\n'.join(['| ' + ' | '.join(columns) + ' |', '| ' + ' | '.join(['---']*len(columns)) + ' |'] + [
             '| ' + ' | '.join(f'{row[c]:,.2f}' if hasattr(row[c],'as_tuple') else str(row[c]) for c in columns) + ' |'
             for row in rows])
-    text = '# Resultados verificados\n\nGenerados mediante consultas al PostgreSQL del proyecto; todos los datos de la fuente son ficticios.\n\n'
+    text = '# Resultados\n\nConsultas sobre el Data Warehouse. Los datos de origen son ficticios.\n\n'
     text += '''## Gráficas
 
 ![Ventas por mes](graficas/ventas_mensuales.svg)
@@ -79,7 +79,7 @@ Gráficas SVG regenerables con `python scripts/generar_graficas.py`. Los importe
         f"- Se registraron {total['tickets']:,} ventas completadas, {total['unidades_vendidas']:,} unidades y {total['ventas_completadas']:,.2f} en ventas.\n"
         f"- El mes de mayor venta fue {top_month['periodo']} con {top_month['ventas']:,.2f}.\n"
         f"- {result['categorias'][0]['categoria']} lidera categorías y {result['sucursales'][0]['sucursal']} lidera sucursales.\n"
-        f"- El cumplimiento agregado de las metas es {total['ventas_completadas']/total_target:.2%}. Las metas sintéticas están muy por encima de las ventas observadas; no se infieren causas empresariales reales.\n"
+        f"- El cumplimiento agregado de las metas es {total['ventas_completadas']/total_target:.2%}. Las metas sintéticas están muy por encima de las ventas observadas; no se infieren causas del desempeño.\n"
         f"- Al corte {inventory['fecha_corte']} hay {inventory['sin_stock']} posiciones sin stock y {inventory['bajo_minimo']} bajo mínimo, de {inventory['posiciones']} posiciones. Revisar reposición y lotes próximos a vencer.\n\n")
     for name in QUERIES:
         text += f'## {name.replace("_", " ").capitalize()}\n\n{table(result[name])}\n\n'
@@ -98,7 +98,7 @@ El inventario corresponde al último corte disponible. Las existencias no deben 
 La coincidencia de una venta con una promoción representa elegibilidad potencial. El dataset no incluye un identificador de promoción aplicada; no se atribuye causalidad ni se descuenta nuevamente.
 '''
     (ROOT / 'docs/resultados.md').write_text(text,encoding='utf-8')
-    print('Resultados reales guardados en docs/resultados.md y evidence/')
+    print('Resultados guardados en docs/resultados.md y evidence/')
 
 
 if __name__ == '__main__':

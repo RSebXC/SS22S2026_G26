@@ -1,4 +1,4 @@
-"""Genera SVG editables con resultados reales; no requiere librerías externas."""
+"""Genera las gráficas SVG de docs/graficas."""
 import json
 from html import escape
 from pathlib import Path

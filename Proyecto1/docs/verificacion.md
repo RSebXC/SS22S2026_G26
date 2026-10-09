@@ -1,11 +1,10 @@
 # Verificación del proyecto
 
-
 ## Qué se comprobó
 
 | Componente | Comprobación | Evidencia |
 |---|---|---|
-| Fuentes | Extracción desde PostgreSQL real y cinco CSV | `evidence/carga_raw.json` |
+| Fuentes | Extracción desde PostgreSQL y cinco CSV | `evidence/carga_raw.json` |
 | dbt | 31 modelos y 119 pruebas de datos | `evidence/dbt_resultados.json` |
 | Conciliaciones | 11 conteos/importes consistentes | `evidence/validaciones.json` |
 | Airflow | Ocho operadores ejecutados en modo prueba | `evidence/dag_ejecucion.json` |
@@ -63,7 +62,7 @@ La verificación se realizó en el entorno local de Docker. La interfaz de Airfl
 - `sql/02_constraints.sql`: PK/FK/checks idempotentes después de dbt.
 - `sql/03_validaciones.sql`: once conciliaciones.
 - `sql/04_consultas_analiticas.sql`: ocho consultas de negocio.
-- `sql/05_dw_ddl.sql`: DDL real exportado mediante `pg_dump --schema-only --no-owner --no-privileges`, sin datos ni contraseñas.
+- `sql/05_dw_ddl.sql`: DDL exportado con `pg_dump --schema-only --no-owner --no-privileges --exclude-schema=dbt_test__audit`, sin datos ni contraseñas.
 - `docs/dbt/`: copia del índice, manifest y catálogo de documentación dbt.
 
 `05_dw_ddl.sql` sirve para inspeccionar o reconstruir la estructura en una base vacía; el flujo normal crea raw con Python y transforma el DW con dbt. No ejecutar el DDL exportado sobre las tablas existentes.

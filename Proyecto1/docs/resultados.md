@@ -1,6 +1,6 @@
-# Resultados verificados
+# Resultados
 
-Generados mediante consultas al PostgreSQL del proyecto; todos los datos de la fuente son ficticios.
+Consultas sobre el Data Warehouse. Los datos de origen son ficticios.
 
 ## Gráficas
 
@@ -16,7 +16,7 @@ Generados mediante consultas al PostgreSQL del proyecto; todos los datos de la f
 - Se registraron 1,129 ventas completadas, 17,963 unidades y 780,201.72 en ventas.
 - El mes de mayor venta fue 2026-01 con 127,301.01.
 - Snacks lidera categorías y Villa Nueva lidera sucursales.
-- El cumplimiento agregado de las metas es 8.43%. Las metas sintéticas están muy por encima de las ventas observadas; no se infieren causas empresariales reales.
+- El cumplimiento agregado de las metas es 8.43%. Las metas sintéticas están muy por encima de las ventas observadas; no se infieren causas del desempeño.
 - Al corte 2026-08-31 hay 26 posiciones sin stock y 50 bajo mínimo, de 480 posiciones. Revisar reposición y lotes próximos a vencer.
 
 ## Resumen
