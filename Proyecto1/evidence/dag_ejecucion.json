@@ -1,0 +1,51 @@
+{
+  "run_id": "manual__2026-10-08T06:00:00-06:00",
+  "state": "success",
+  "start_date": "2026-10-08 12:00:00+00:00",
+  "end_date": "2026-10-09 03:21:50.878450+00:00",
+  "tasks": [
+    {
+      "task_id": "verificar_fuentes",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "exportar_marts",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "cargar_raw",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "validar_raw",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "dbt_build",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "aplicar_claves",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "conciliar_resultados",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "dbt_docs",
+      "state": "success",
+      "try_number": 1
+    }
+  ],
+  "command_exit_code": 0,
+  "verification_mode": "airflow dags test: ejecución real de operadores; scheduler verificado por separado",
+  "generated_at_utc": "2026-10-09 03:21:51.352992+00:00"
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="544" viewBox="0 0 1000 544" role="img" aria-label="Ventas completadas por categoría">
+<rect width="100%" height="100%" rx="14" fill="#f5f8fc"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#142338">
+<text x="30" y="42" font-size="24" font-weight="700">Ventas completadas por categoría</text>
+<text x="30" y="69" font-size="13" fill="#5c6d80">Productos agrupados por su categoría transaccional</text>
+<text x="215" y="124" text-anchor="end" font-size="14">Snacks</text>
+<rect x="230" y="104" width="575.00" height="30" rx="5" fill="#137c78"/>
+<text x="817.00" y="124" font-size="13">119,361.04</text>
+<text x="215" y="172" text-anchor="end" font-size="14">Limpieza</text>
+<rect x="230" y="152" width="534.70" height="30" rx="5" fill="#137c78"/>
+<text x="776.70" y="172" font-size="13">110,995.03</text>
+<text x="215" y="220" text-anchor="end" font-size="14">Bebidas</text>
+<rect x="230" y="200" width="461.42" height="30" rx="5" fill="#137c78"/>
+<text x="703.42" y="220" font-size="13">95,784.04</text>
+<text x="215" y="268" text-anchor="end" font-size="14">Panadería</text>
+<rect x="230" y="248" width="453.40" height="30" rx="5" fill="#137c78"/>
+<text x="695.40" y="268" font-size="13">94,119.60</text>
+<text x="215" y="316" text-anchor="end" font-size="14">Congelados</text>
+<rect x="230" y="296" width="446.58" height="30" rx="5" fill="#137c78"/>
+<text x="688.58" y="316" font-size="13">92,703.53</text>
+<text x="215" y="364" text-anchor="end" font-size="14">Lácteos</text>
+<rect x="230" y="344" width="445.66" height="30" rx="5" fill="#137c78"/>
+<text x="687.66" y="364" font-size="13">92,511.43</text>
+<text x="215" y="412" text-anchor="end" font-size="14">Abarrotes</text>
+<rect x="230" y="392" width="438.54" height="30" rx="5" fill="#137c78"/>
+<text x="680.54" y="412" font-size="13">91,034.89</text>
+<text x="215" y="460" text-anchor="end" font-size="14">Cuidado personal</text>
+<rect x="230" y="440" width="403.17" height="30" rx="5" fill="#137c78"/>
+<text x="645.17" y="460" font-size="13">83,692.16</text>
+<text x="30" y="519" font-size="12" fill="#5c6d80">Fuente: PostgreSQL / SG-Food ficticio · importes en unidades monetarias · barras desde cero</text>
+</g></svg>

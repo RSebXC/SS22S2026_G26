@@ -1,0 +1,66 @@
+erDiagram
+    DIM_FECHA ||--o{ FACT_VENTAS : fecha
+    DIM_PRODUCTO ||--o{ FACT_VENTAS : producto
+    DIM_CLIENTE ||--o{ FACT_VENTAS : cliente
+    DIM_SUCURSAL ||--o{ FACT_VENTAS : sucursal
+    DIM_CANAL ||--o{ FACT_VENTAS : canal
+    DIM_PAGO ||--o{ FACT_VENTAS : pago
+    DIM_FECHA ||--o{ FACT_INVENTARIO : corte_y_vencimiento
+    DIM_PRODUCTO ||--o{ FACT_INVENTARIO : producto
+    DIM_SUCURSAL ||--o{ FACT_INVENTARIO : sucursal
+    DIM_FECHA ||--o{ FACT_DEVOLUCIONES : fecha_devolucion
+    DIM_PRODUCTO ||--o{ FACT_DEVOLUCIONES : producto
+    DIM_CLIENTE o|--o{ FACT_DEVOLUCIONES : cliente_origen
+    DIM_SUCURSAL o|--o{ FACT_DEVOLUCIONES : sucursal_origen
+    DIM_FECHA ||--o{ FACT_METAS : inicio_mes
+    DIM_SUCURSAL ||--o{ FACT_METAS : sucursal
+    DIM_PRODUCTO ||--o{ FACT_PROVEEDOR_PRECIO : producto
+    DIM_PROVEEDOR ||--o{ FACT_PROVEEDOR_PRECIO : proveedor
+    DIM_FECHA ||--o{ FACT_PROVEEDOR_PRECIO : vigencia
+    FACT_VENTAS ||--o{ BRIDGE_PROMOCION_VENTA : linea_elegible
+    DIM_PROMOCION ||--o{ BRIDGE_PROMOCION_VENTA : promocion_potencial
+    FACT_VENTAS {
+        bigint venta_key PK
+        bigint id_venta
+        int fecha_key FK
+        int producto_key FK
+        int cliente_key FK
+        int sucursal_key FK
+        string canal_key FK
+        string pago_key FK
+        string estado
+        numeric importe_neto_vendido
+        numeric margen_estimado
+    }
+    FACT_INVENTARIO {
+        string inventario_key PK
+        int fecha_key FK
+        int vencimiento_fecha_key FK
+        int producto_key FK
+        int sucursal_key FK
+        string lote
+        int stock_disponible
+    }
+    FACT_DEVOLUCIONES {
+        bigint devolucion_key PK
+        int fecha_key FK
+        int producto_key FK
+        int cliente_key FK
+        int sucursal_key FK
+        boolean es_valida
+        numeric importe_devolucion_estimado
+    }
+    FACT_METAS {
+        string meta_key PK
+        int fecha_key FK
+        int sucursal_key FK
+        string periodo
+        numeric meta_ventas
+    }
+    FACT_PROVEEDOR_PRECIO {
+        string precio_key PK
+        int producto_key FK
+        int proveedor_key FK
+        int fecha_key FK
+        numeric costo_proveedor
+    }

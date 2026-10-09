@@ -1,0 +1,131 @@
+{
+  "generated_at_utc": "2026-10-09 03:11:34.643849+00:00",
+  "injected_failure": "lectura de la última fuente CSV, después de reemplazar otras 11 tablas",
+  "raw_and_audit_unchanged": true,
+  "before": {
+    "sucursal": [
+      6,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "categoria": [
+      8,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "marca": [
+      10,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "producto": [
+      80,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "cliente": [
+      250,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "venta": [
+      1200,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "venta_detalle": [
+      3209,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "inventario_bodega": [
+      3840,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "proveedores_precios": [
+      103,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "promociones": [
+      30,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "metas_ventas": [
+      48,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "devoluciones": [
+      80,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "audit_count": 6
+  },
+  "after": {
+    "sucursal": [
+      6,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "categoria": [
+      8,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "marca": [
+      10,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "producto": [
+      80,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "cliente": [
+      250,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "venta": [
+      1200,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "venta_detalle": [
+      3209,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "inventario_bodega": [
+      3840,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "proveedores_precios": [
+      103,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "promociones": [
+      30,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "metas_ventas": [
+      48,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "devoluciones": [
+      80,
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "e5f41dd8-928c-49b9-914b-45fdb06749a6"
+    ],
+    "audit_count": 6
+  }
+}

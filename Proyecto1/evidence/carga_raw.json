@@ -1,0 +1,25 @@
+{
+  "batch_id": "5f411533-1be5-4be0-be27-7b69751ac9f4",
+  "started_at_utc": "2026-10-09 03:21:40.739323+00:00",
+  "counts": {
+    "sucursal": 6,
+    "categoria": 8,
+    "marca": 10,
+    "producto": 80,
+    "cliente": 250,
+    "venta": 1200,
+    "venta_detalle": 3209,
+    "inventario_bodega": 3840,
+    "proveedores_precios": 103,
+    "promociones": 30,
+    "metas_ventas": 48,
+    "devoluciones": 80
+  },
+  "file_hashes": {
+    "inventario_bodega.csv": "7e8794981f5e1fff24b92af8e6676c01bed0ad5b8c441d4b7c134a4e85c9c426",
+    "proveedores_precios.csv": "2f4afa9b693308d42f0636553094be9d86dd0fb99be0fd478969f9f3b88eb703",
+    "promociones.csv": "3d257f794e3eeae778bbcb2e4a52379d84741caba54ed0675568ae3f7e997874",
+    "metas_ventas.csv": "01aeb8884b82fd21403807c9b7d1c1d4eb2aab4b8e8b9cc9817d85ae8b0a2251",
+    "devoluciones.csv": "52e2a98e40258aadc90e143184bc33a6503bc2580afa30a8dee975c57bb96d8b"
+  }
+}

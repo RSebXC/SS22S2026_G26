@@ -1,0 +1,196 @@
+{
+  "generated_at_utc": "2026-10-09 03:21:54.361125+00:00",
+  "resumen": [
+    {
+      "ventas_completadas": "780201.72",
+      "unidades_vendidas": 17963,
+      "tickets": 1129,
+      "margen_estimado": "208258.52",
+      "ticket_promedio": "691.0555535872453499"
+    }
+  ],
+  "mensual": [
+    {
+      "periodo": "2026-01",
+      "ventas": "127301.01",
+      "devoluciones_estimadas": "522.29",
+      "meta": "1049746.03",
+      "cumplimiento": "0.12126838907883271538"
+    },
+    {
+      "periodo": "2026-02",
+      "ventas": "88067.05",
+      "devoluciones_estimadas": "1132.45",
+      "meta": "1304945.03",
+      "cumplimiento": "0.06748717223743899772"
+    },
+    {
+      "periodo": "2026-03",
+      "ventas": "84648.29",
+      "devoluciones_estimadas": "906.76",
+      "meta": "1118497.89",
+      "cumplimiento": "0.07568033051899632998"
+    },
+    {
+      "periodo": "2026-04",
+      "ventas": "93334.92",
+      "devoluciones_estimadas": "437.24",
+      "meta": "1125580.27",
+      "cumplimiento": "0.08292160273918092043"
+    },
+    {
+      "periodo": "2026-05",
+      "ventas": "102375.15",
+      "devoluciones_estimadas": "556.01",
+      "meta": "1116571.67",
+      "cumplimiento": "0.09168703877288951814"
+    },
+    {
+      "periodo": "2026-06",
+      "ventas": "99628.58",
+      "devoluciones_estimadas": "1148.66",
+      "meta": "1057517.84",
+      "cumplimiento": "0.09420983385017883008"
+    },
+    {
+      "periodo": "2026-07",
+      "ventas": "96752.93",
+      "devoluciones_estimadas": "812.17",
+      "meta": "1160512.76",
+      "cumplimiento": "0.08337084548729994145"
+    },
+    {
+      "periodo": "2026-08",
+      "ventas": "88093.79",
+      "devoluciones_estimadas": "859.21",
+      "meta": "1324221.07",
+      "cumplimiento": "0.06652498740259434174"
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": "Snacks",
+      "ventas": "119361.04"
+    },
+    {
+      "categoria": "Limpieza",
+      "ventas": "110995.03"
+    },
+    {
+      "categoria": "Bebidas",
+      "ventas": "95784.04"
+    },
+    {
+      "categoria": "Panadería",
+      "ventas": "94119.60"
+    },
+    {
+      "categoria": "Congelados",
+      "ventas": "92703.53"
+    },
+    {
+      "categoria": "Lácteos",
+      "ventas": "92511.43"
+    },
+    {
+      "categoria": "Abarrotes",
+      "ventas": "91034.89"
+    },
+    {
+      "categoria": "Cuidado personal",
+      "ventas": "83692.16"
+    }
+  ],
+  "sucursales": [
+    {
+      "sucursal": "Villa Nueva",
+      "ventas": "149831.60",
+      "meta": "1376842.79",
+      "cumplimiento": "0.10882259113983521677"
+    },
+    {
+      "sucursal": "Central Guatemala",
+      "ventas": "139839.95",
+      "meta": "1440639.23",
+      "cumplimiento": "0.09706798696575824886"
+    },
+    {
+      "sucursal": "Escuintla",
+      "ventas": "129392.30",
+      "meta": "1555405.49",
+      "cumplimiento": "0.08318878956766444228"
+    },
+    {
+      "sucursal": "Mixco",
+      "ventas": "122146.08",
+      "meta": "1591727.76",
+      "cumplimiento": "0.07673804721480763771"
+    },
+    {
+      "sucursal": "Amatitlán",
+      "ventas": "120463.79",
+      "meta": "1615970.34",
+      "cumplimiento": "0.07454579271547768630"
+    },
+    {
+      "sucursal": "Antigua",
+      "ventas": "118528.00",
+      "meta": "1677006.95",
+      "cumplimiento": "0.07067829981265134292"
+    }
+  ],
+  "inventario": [
+    {
+      "fecha_corte": "2026-08-31",
+      "posiciones": 480,
+      "existencias": 22194,
+      "sin_stock": 26,
+      "bajo_minimo": 50,
+      "sobre_maximo": 28,
+      "vence_en_30_dias": 2,
+      "valor_referencia": "701625.39"
+    }
+  ],
+  "devoluciones": [
+    {
+      "resultado_validacion": "VALIDA",
+      "registros": 80,
+      "unidades": 149
+    }
+  ],
+  "estados": [
+    {
+      "estado": "ANULADA",
+      "ventas": 48
+    },
+    {
+      "estado": "COMPLETADA",
+      "ventas": 1129
+    },
+    {
+      "estado": "PENDIENTE",
+      "ventas": 23
+    }
+  ],
+  "claves": [
+    {
+      "tipo": "c",
+      "cantidad": 4
+    },
+    {
+      "tipo": "f",
+      "cantidad": 21
+    },
+    {
+      "tipo": "p",
+      "cantidad": 14
+    }
+  ],
+  "dbt": {
+    "pass": 119,
+    "success": 31
+  },
+  "dbt_models": 31,
+  "dbt_tests": 119,
+  "dbt_elapsed_seconds": 3.0384740829467773
+}

@@ -1,0 +1,34 @@
+{
+  "casos_calidad_opcionales.csv": {
+    "bytes": 527,
+    "sha256": "d98335d0eea0034fe6b61ab6d04df1ac7529c532e6a63fd37f5e77c0243d1077"
+  },
+  "catalogo_insumos_sgfood.xlsx": {
+    "bytes": 13712,
+    "sha256": "4ab2ef027c9667650c1afe76cb73474ec02d53e2550554506fb4dc3ee1a47696"
+  },
+  "devoluciones.csv": {
+    "bytes": 3609,
+    "sha256": "52e2a98e40258aadc90e143184bc33a6503bc2580afa30a8dee975c57bb96d8b"
+  },
+  "inventario_bodega.csv": {
+    "bytes": 192386,
+    "sha256": "7e8794981f5e1fff24b92af8e6676c01bed0ad5b8c441d4b7c134a4e85c9c426"
+  },
+  "metas_ventas.csv": {
+    "bytes": 1320,
+    "sha256": "01aeb8884b82fd21403807c9b7d1c1d4eb2aab4b8e8b9cc9817d85ae8b0a2251"
+  },
+  "promociones.csv": {
+    "bytes": 1613,
+    "sha256": "3d257f794e3eeae778bbcb2e4a52379d84741caba54ed0675568ae3f7e997874"
+  },
+  "proveedores_precios.csv": {
+    "bytes": 4953,
+    "sha256": "2f4afa9b693308d42f0636553094be9d86dd0fb99be0fd478969f9f3b88eb703"
+  },
+  "sgfood_oltp.sql": {
+    "bytes": 242945,
+    "sha256": "09504cd1257e598462d7432020104835a519d2de3d978d355c4c13a342817c4a"
+  }
+}

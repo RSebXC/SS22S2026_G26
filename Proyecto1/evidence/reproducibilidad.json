@@ -1,0 +1,201 @@
+{
+  "generated_at_utc": "2026-10-09 03:21:52.946901+00:00",
+  "snapshots_compared": 3,
+  "same_counts_and_files": true,
+  "snapshots": [
+    {
+      "batch_id": "5f411533-1be5-4be0-be27-7b69751ac9f4",
+      "counts": {
+        "marca": 10,
+        "venta": 1200,
+        "cliente": 250,
+        "producto": 80,
+        "sucursal": 6,
+        "categoria": 8,
+        "promociones": 30,
+        "devoluciones": 80,
+        "metas_ventas": 48,
+        "venta_detalle": 3209,
+        "inventario_bodega": 3840,
+        "proveedores_precios": 103
+      },
+      "file_hashes": {
+        "promociones.csv": "3d257f794e3eeae778bbcb2e4a52379d84741caba54ed0675568ae3f7e997874",
+        "devoluciones.csv": "52e2a98e40258aadc90e143184bc33a6503bc2580afa30a8dee975c57bb96d8b",
+        "metas_ventas.csv": "01aeb8884b82fd21403807c9b7d1c1d4eb2aab4b8e8b9cc9817d85ae8b0a2251",
+        "inventario_bodega.csv": "7e8794981f5e1fff24b92af8e6676c01bed0ad5b8c441d4b7c134a4e85c9c426",
+        "proveedores_precios.csv": "2f4afa9b693308d42f0636553094be9d86dd0fb99be0fd478969f9f3b88eb703"
+      }
+    },
+    {
+      "batch_id": "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "counts": {
+        "marca": 10,
+        "venta": 1200,
+        "cliente": 250,
+        "producto": 80,
+        "sucursal": 6,
+        "categoria": 8,
+        "promociones": 30,
+        "devoluciones": 80,
+        "metas_ventas": 48,
+        "venta_detalle": 3209,
+        "inventario_bodega": 3840,
+        "proveedores_precios": 103
+      },
+      "file_hashes": {
+        "promociones.csv": "3d257f794e3eeae778bbcb2e4a52379d84741caba54ed0675568ae3f7e997874",
+        "devoluciones.csv": "52e2a98e40258aadc90e143184bc33a6503bc2580afa30a8dee975c57bb96d8b",
+        "metas_ventas.csv": "01aeb8884b82fd21403807c9b7d1c1d4eb2aab4b8e8b9cc9817d85ae8b0a2251",
+        "inventario_bodega.csv": "7e8794981f5e1fff24b92af8e6676c01bed0ad5b8c441d4b7c134a4e85c9c426",
+        "proveedores_precios.csv": "2f4afa9b693308d42f0636553094be9d86dd0fb99be0fd478969f9f3b88eb703"
+      }
+    },
+    {
+      "batch_id": "0f672c88-d4f4-4014-b1c7-08239c43b41c",
+      "counts": {
+        "marca": 10,
+        "venta": 1200,
+        "cliente": 250,
+        "producto": 80,
+        "sucursal": 6,
+        "categoria": 8,
+        "promociones": 30,
+        "devoluciones": 80,
+        "metas_ventas": 48,
+        "venta_detalle": 3209,
+        "inventario_bodega": 3840,
+        "proveedores_precios": 103
+      },
+      "file_hashes": {
+        "promociones.csv": "3d257f794e3eeae778bbcb2e4a52379d84741caba54ed0675568ae3f7e997874",
+        "devoluciones.csv": "52e2a98e40258aadc90e143184bc33a6503bc2580afa30a8dee975c57bb96d8b",
+        "metas_ventas.csv": "01aeb8884b82fd21403807c9b7d1c1d4eb2aab4b8e8b9cc9817d85ae8b0a2251",
+        "inventario_bodega.csv": "7e8794981f5e1fff24b92af8e6676c01bed0ad5b8c441d4b7c134a4e85c9c426",
+        "proveedores_precios.csv": "2f4afa9b693308d42f0636553094be9d86dd0fb99be0fd478969f9f3b88eb703"
+      }
+    }
+  ],
+  "tables": [
+    {
+      "schema": "audit",
+      "table": "load_runs"
+    },
+    {
+      "schema": "marts",
+      "table": "bridge_promocion_venta"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_canal"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_cliente"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_fecha"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_pago"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_producto"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_promocion"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_proveedor"
+    },
+    {
+      "schema": "marts",
+      "table": "dim_sucursal"
+    },
+    {
+      "schema": "marts",
+      "table": "fact_devoluciones"
+    },
+    {
+      "schema": "marts",
+      "table": "fact_inventario"
+    },
+    {
+      "schema": "marts",
+      "table": "fact_metas"
+    },
+    {
+      "schema": "marts",
+      "table": "fact_proveedor_precio"
+    },
+    {
+      "schema": "marts",
+      "table": "fact_ventas"
+    },
+    {
+      "schema": "marts",
+      "table": "rpt_calidad_devoluciones"
+    },
+    {
+      "schema": "marts",
+      "table": "rpt_inventario_actual"
+    },
+    {
+      "schema": "marts",
+      "table": "rpt_ventas_mensuales"
+    },
+    {
+      "schema": "raw",
+      "table": "categoria"
+    },
+    {
+      "schema": "raw",
+      "table": "cliente"
+    },
+    {
+      "schema": "raw",
+      "table": "devoluciones"
+    },
+    {
+      "schema": "raw",
+      "table": "inventario_bodega"
+    },
+    {
+      "schema": "raw",
+      "table": "marca"
+    },
+    {
+      "schema": "raw",
+      "table": "metas_ventas"
+    },
+    {
+      "schema": "raw",
+      "table": "producto"
+    },
+    {
+      "schema": "raw",
+      "table": "promociones"
+    },
+    {
+      "schema": "raw",
+      "table": "proveedores_precios"
+    },
+    {
+      "schema": "raw",
+      "table": "sucursal"
+    },
+    {
+      "schema": "raw",
+      "table": "venta"
+    },
+    {
+      "schema": "raw",
+      "table": "venta_detalle"
+    }
+  ]
+}

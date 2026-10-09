@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="544" viewBox="0 0 1000 544" role="img" aria-label="Ventas completadas por mes">
+<rect width="100%" height="100%" rx="14" fill="#f5f8fc"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#142338">
+<text x="30" y="42" font-size="24" font-weight="700">Ventas completadas por mes</text>
+<text x="30" y="69" font-size="13" fill="#5c6d80">Subtotal después del descuento original; excluye pendientes y anuladas</text>
+<text x="215" y="124" text-anchor="end" font-size="14">2026-01</text>
+<rect x="230" y="104" width="575.00" height="30" rx="5" fill="#137c78"/>
+<text x="817.00" y="124" font-size="13">127,301.01</text>
+<text x="215" y="172" text-anchor="end" font-size="14">2026-02</text>
+<rect x="230" y="152" width="397.79" height="30" rx="5" fill="#137c78"/>
+<text x="639.79" y="172" font-size="13">88,067.05</text>
+<text x="215" y="220" text-anchor="end" font-size="14">2026-03</text>
+<rect x="230" y="200" width="382.34" height="30" rx="5" fill="#137c78"/>
+<text x="624.34" y="220" font-size="13">84,648.29</text>
+<text x="215" y="268" text-anchor="end" font-size="14">2026-04</text>
+<rect x="230" y="248" width="421.58" height="30" rx="5" fill="#137c78"/>
+<text x="663.58" y="268" font-size="13">93,334.92</text>
+<text x="215" y="316" text-anchor="end" font-size="14">2026-05</text>
+<rect x="230" y="296" width="462.41" height="30" rx="5" fill="#137c78"/>
+<text x="704.41" y="316" font-size="13">102,375.15</text>
+<text x="215" y="364" text-anchor="end" font-size="14">2026-06</text>
+<rect x="230" y="344" width="450.01" height="30" rx="5" fill="#137c78"/>
+<text x="692.01" y="364" font-size="13">99,628.58</text>
+<text x="215" y="412" text-anchor="end" font-size="14">2026-07</text>
+<rect x="230" y="392" width="437.02" height="30" rx="5" fill="#137c78"/>
+<text x="679.02" y="412" font-size="13">96,752.93</text>
+<text x="215" y="460" text-anchor="end" font-size="14">2026-08</text>
+<rect x="230" y="440" width="397.91" height="30" rx="5" fill="#137c78"/>
+<text x="639.91" y="460" font-size="13">88,093.79</text>
+<text x="30" y="519" font-size="12" fill="#5c6d80">Fuente: PostgreSQL / SG-Food ficticio · importes en unidades monetarias · barras desde cero</text>
+</g></svg>

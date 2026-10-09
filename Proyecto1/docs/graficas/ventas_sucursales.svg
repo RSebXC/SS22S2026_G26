@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="448" viewBox="0 0 1000 448" role="img" aria-label="Ventas completadas por sucursal">
+<rect width="100%" height="100%" rx="14" fill="#f5f8fc"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#142338">
+<text x="30" y="42" font-size="24" font-weight="700">Ventas completadas por sucursal</text>
+<text x="30" y="69" font-size="13" fill="#5c6d80">Enero–agosto de 2026 · datos ficticios</text>
+<text x="215" y="124" text-anchor="end" font-size="14">Villa Nueva</text>
+<rect x="230" y="104" width="575.00" height="30" rx="5" fill="#137c78"/>
+<text x="817.00" y="124" font-size="13">149,831.60</text>
+<text x="215" y="172" text-anchor="end" font-size="14">Central Guatemala</text>
+<rect x="230" y="152" width="536.66" height="30" rx="5" fill="#137c78"/>
+<text x="778.66" y="172" font-size="13">139,839.95</text>
+<text x="215" y="220" text-anchor="end" font-size="14">Escuintla</text>
+<rect x="230" y="200" width="496.56" height="30" rx="5" fill="#137c78"/>
+<text x="738.56" y="220" font-size="13">129,392.30</text>
+<text x="215" y="268" text-anchor="end" font-size="14">Mixco</text>
+<rect x="230" y="248" width="468.75" height="30" rx="5" fill="#137c78"/>
+<text x="710.75" y="268" font-size="13">122,146.08</text>
+<text x="215" y="316" text-anchor="end" font-size="14">Amatitlán</text>
+<rect x="230" y="296" width="462.30" height="30" rx="5" fill="#137c78"/>
+<text x="704.30" y="316" font-size="13">120,463.79</text>
+<text x="215" y="364" text-anchor="end" font-size="14">Antigua</text>
+<rect x="230" y="344" width="454.87" height="30" rx="5" fill="#137c78"/>
+<text x="696.87" y="364" font-size="13">118,528.00</text>
+<text x="30" y="423" font-size="12" fill="#5c6d80">Fuente: PostgreSQL / SG-Food ficticio · importes en unidades monetarias · barras desde cero</text>
+</g></svg>

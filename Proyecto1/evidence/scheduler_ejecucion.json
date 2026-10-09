@@ -1,0 +1,50 @@
+{
+  "state": "success",
+  "start_date": "2026-10-09 02:54:03.146442+00:00",
+  "end_date": "2026-10-09 02:54:19.756071+00:00",
+  "tasks": [
+    {
+      "task_id": "verificar_fuentes",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "cargar_raw",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "validar_raw",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "dbt_build",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "aplicar_claves",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "conciliar_resultados",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "dbt_docs",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "exportar_marts",
+      "state": "success",
+      "try_number": 1
+    }
+  ],
+  "run_id": "verificacion_scheduler_20261009T025354Z",
+  "verification_mode": "scheduler + LocalExecutor; ejecución disparada mediante CLI",
+  "generated_at_utc": "2026-10-09 02:54:21.288249+00:00"
+}

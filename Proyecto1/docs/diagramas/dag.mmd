@@ -1,0 +1,8 @@
+flowchart LR
+    A[verificar_fuentes] --> B[cargar_raw]
+    B --> C[validar_raw]
+    C --> D[dbt_build]
+    D --> E[aplicar_claves]
+    E --> F[conciliar_resultados]
+    F --> G[dbt_docs]
+    G --> H[exportar_marts]

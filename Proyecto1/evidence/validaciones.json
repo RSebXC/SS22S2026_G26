@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-10-09 03:21:47.156532+00:00",
+  "checks": [
+    {
+      "check_name": "cortes_inventario",
+      "expected": "3840",
+      "actual": "3840",
+      "passed": true
+    },
+    {
+      "check_name": "cotizaciones_preservadas",
+      "expected": "103",
+      "actual": "103",
+      "passed": true
+    },
+    {
+      "check_name": "devoluciones_preservadas",
+      "expected": "80",
+      "actual": "80",
+      "passed": true
+    },
+    {
+      "check_name": "devoluciones_reporte_sin_duplicacion",
+      "expected": "6374.79",
+      "actual": "6374.79",
+      "passed": true
+    },
+    {
+      "check_name": "lineas_venta",
+      "expected": "3209",
+      "actual": "3209",
+      "passed": true
+    },
+    {
+      "check_name": "metas_preservadas",
+      "expected": "48",
+      "actual": "48",
+      "passed": true
+    },
+    {
+      "check_name": "metas_reporte_sin_duplicacion",
+      "expected": "9257592.56",
+      "actual": "9257592.56",
+      "passed": true
+    },
+    {
+      "check_name": "producto_dimension",
+      "expected": "80",
+      "actual": "80",
+      "passed": true
+    },
+    {
+      "check_name": "ultimo_corte_completo",
+      "expected": "480",
+      "actual": "480",
+      "passed": true
+    },
+    {
+      "check_name": "ventas_completadas_importe",
+      "expected": "780201.72",
+      "actual": "780201.72",
+      "passed": true
+    },
+    {
+      "check_name": "ventas_reporte_sin_duplicacion",
+      "expected": "780201.72",
+      "actual": "780201.72",
+      "passed": true
+    }
+  ]
+}

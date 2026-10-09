@@ -1,0 +1,16 @@
+flowchart LR
+    SQL[SQL original del curso] --> BOOT[Bootstrap Python no destructivo]
+    BOOT --> SRC[(PostgreSQL sgfood_source)]
+    SRC --> EL[Python: extracción y carga]
+    CSV[5 CSV operativos] --> EL
+    EL --> RAW[(sgfood_dw: raw)]
+    RAW --> STG[dbt: staging / vistas tipadas]
+    STG --> INT[dbt: intermediate / reglas]
+    INT --> MART[(dbt: marts / dimensiones y hechos)]
+    MART --> VAL[Pruebas dbt + PK/FK + conciliaciones]
+    VAL --> EXP[CSV + documentación + evidencia]
+    AIR[Airflow] -. orquesta .-> EL
+    AIR -. orquesta .-> STG
+    AIR -. orquesta .-> VAL
+    XLSX[Excel: diccionario] --> DOC[Documentación de fuentes]
+    CASOS[10 casos inválidos] --> TEST[Pruebas con rollback]
