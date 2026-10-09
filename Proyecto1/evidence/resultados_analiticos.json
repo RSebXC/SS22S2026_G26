@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-09 03:21:54.361125+00:00",
+  "generated_at_utc": "2026-10-09 17:23:32.459975+00:00",
   "resumen": [
     {
       "ventas_completadas": "780201.72",
@@ -192,5 +192,5 @@
   },
   "dbt_models": 31,
   "dbt_tests": 119,
-  "dbt_elapsed_seconds": 3.0384740829467773
+  "dbt_elapsed_seconds": 22.86141610145569
 }

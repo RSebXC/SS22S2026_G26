@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict MoA313NAUPFfFvOSUkqQYUInt0xacNFrwUraVOMN8YGdqJ6Cj2Eh7zmlodQ0rAC
+\restrict izJF0dSbho7COmVn05DJIYY7AsjmYodNEh7lGiV2DdyKp3zsYbBa2AschYgEWZp
 
 -- Dumped from database version 16.10 (Debian 16.10-1.pgdg13+1)
 -- Dumped by pg_dump version 16.10 (Debian 16.10-1.pgdg13+1)
@@ -23,13 +23,6 @@ SET row_security = off;
 --
 
 CREATE SCHEMA audit;
-
-
---
--- Name: dbt_test__audit; Type: SCHEMA; Schema: -; Owner: -
---
-
-CREATE SCHEMA dbt_test__audit;
 
 
 --
@@ -74,33 +67,6 @@ CREATE TABLE audit.load_runs (
     completed_at timestamp with time zone DEFAULT now() NOT NULL,
     counts jsonb NOT NULL,
     file_hashes jsonb NOT NULL
-);
-
-
---
--- Name: devoluciones_invalidas; Type: TABLE; Schema: dbt_test__audit; Owner: -
---
-
-CREATE TABLE dbt_test__audit.devoluciones_invalidas (
-    id_devolucion bigint,
-    fecha date,
-    id_venta bigint,
-    id_producto integer,
-    cantidad integer,
-    motivo text,
-    _loaded_at timestamp with time zone,
-    _source text,
-    _batch_id uuid,
-    _source_row integer,
-    cantidad_total_devuelta bigint,
-    id_detalle bigint,
-    id_cliente integer,
-    id_sucursal integer,
-    cantidad_vendida integer,
-    fecha_venta date,
-    estado text,
-    resultado_validacion text,
-    importe_estimado numeric
 );
 
 
@@ -420,10 +386,6 @@ CREATE TABLE marts.dim_producto (
     costo_base numeric(12,2),
     precio_lista numeric(12,2),
     activo boolean,
-    _loaded_at timestamp with time zone,
-    _source text,
-    _batch_id uuid,
-    _source_row integer,
     categoria text,
     marca text
 );
@@ -1298,4 +1260,5 @@ ALTER TABLE ONLY marts.fact_ventas
 -- PostgreSQL database dump complete
 --
 
-\unrestrict MoA313NAUPFfFvOSUkqQYUInt0xacNFrwUraVOMN8YGdqJ6Cj2Eh7zmlodQ0rAC
+\unrestrict izJF0dSbho7COmVn05DJIYY7AsjmYodNEh7lGiV2DdyKp3zsYbBa2AschYgEWZp
+

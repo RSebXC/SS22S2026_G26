@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-10-09 03:21:52.946901+00:00",
+  "generated_at_utc": "2026-10-09 17:23:29.255935+00:00",
   "snapshots_compared": 3,
   "same_counts_and_files": true,
   "snapshots": [
     {
-      "batch_id": "5f411533-1be5-4be0-be27-7b69751ac9f4",
+      "batch_id": "a8a15f6e-f648-4595-828e-8975688a183c",
       "counts": {
         "marca": 10,
         "venta": 1200,
@@ -28,7 +28,7 @@
       }
     },
     {
-      "batch_id": "e5f41dd8-928c-49b9-914b-45fdb06749a6",
+      "batch_id": "6cfd7d59-3024-4ef4-a64e-00ba66e4d2ba",
       "counts": {
         "marca": 10,
         "venta": 1200,
@@ -52,7 +52,7 @@
       }
     },
     {
-      "batch_id": "0f672c88-d4f4-4014-b1c7-08239c43b41c",
+      "batch_id": "ca1ffcf3-ea05-4688-a3e9-ccc38de742b1",
       "counts": {
         "marca": 10,
         "venta": 1200,

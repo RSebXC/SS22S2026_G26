@@ -2,913 +2,913 @@
   "metadata": {
     "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v6.json",
     "dbt_version": "1.10.13",
-    "generated_at": "2026-10-09T03:21:46.237750Z",
-    "invocation_id": "c6545ac3-348e-4377-8254-99bd87f576dc",
-    "invocation_started_at": "2026-10-09T03:21:42.451996Z",
+    "generated_at": "2026-10-09T17:56:26.547504Z",
+    "invocation_id": "dba6c1fc-cca7-40ad-b362-7e3879b4386d",
+    "invocation_started_at": "2026-10-09T17:56:08.445208Z",
     "env": {}
   },
-  "elapsed_time": 3.0384740829467773,
+  "elapsed_time": 16.31967067718506,
   "command": "dbt build",
   "results": [
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_categoria__batch_id.6532e3742a",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.06760430335998535
+      "execution_time": 0.12507081031799316
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_categoria__source_row.1f66a04e3b",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.06798934936523438
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_cliente__source_row.79338f2382",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.06862878799438477
+      "execution_time": 0.07227635383605957
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_cliente__batch_id.13f96c5610",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.07094931602478027
+      "execution_time": 0.06749606132507324
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_cliente__source_row.79338f2382",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07743406295776367
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_devoluciones__batch_id.a80a99c8d7",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.03917980194091797
+      "execution_time": 0.07955694198608398
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_devoluciones__source_row.d22f30d0ee",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04876375198364258
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_inventario_bodega__source_row.ac01b46e98",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04927206039428711
+      "execution_time": 0.07033586502075195
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_inventario_bodega__batch_id.46b37ebf06",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.053008317947387695
+      "execution_time": 0.06957769393920898
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_inventario_bodega__source_row.ac01b46e98",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.09960436820983887
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_marca__batch_id.06cad29290",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05181145668029785
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_metas_ventas__batch_id.3b1f27e78c",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03968358039855957
+      "execution_time": 0.07538652420043945
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_marca__source_row.54d610c178",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04285597801208496
+      "execution_time": 0.07503461837768555
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_metas_ventas__batch_id.3b1f27e78c",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.1940314769744873
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_metas_ventas__source_row.4c1a743e49",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04104280471801758
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_promociones__batch_id.0fd25764cd",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.049613237380981445
+      "execution_time": 0.09244751930236816
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_producto__batch_id.537bad0ddb",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.052098989486694336
+      "execution_time": 0.08324098587036133
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_producto__source_row.1c922b7613",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.052419185638427734
+      "execution_time": 0.08171725273132324
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_promociones__batch_id.0fd25764cd",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08457231521606445
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_promociones__source_row.3080386657",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.042601823806762695
+      "execution_time": 0.10683917999267578
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_proveedores_precios__batch_id.bc6141f1cc",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05303668975830078
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_sucursal__batch_id.03a73e92f6",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.06182432174682617
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_sucursal__source_row.fa32c00a22",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.06217384338378906
+      "execution_time": 0.07279467582702637
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_proveedores_precios__source_row.1c1e72c2be",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.06372952461242676
+      "execution_time": 0.0819864273071289
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_sucursal__batch_id.03a73e92f6",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08602118492126465
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_sucursal__source_row.fa32c00a22",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.11013579368591309
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_venta__batch_id.3824e498b1",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.048859357833862305
-    },
-    {
-      "unique_id": "test.sgfood.source_not_null_sgfood_raw_venta_detalle__source_row.4205f63364",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04290604591369629
+      "execution_time": 0.16282320022583008
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_venta__source_row.b62cf933fc",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04476809501647949
+      "execution_time": 0.14447402954101562
     },
     {
       "unique_id": "test.sgfood.source_not_null_sgfood_raw_venta_detalle__batch_id.e1b5cd18ea",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04462885856628418
+      "execution_time": 0.0747222900390625
+    },
+    {
+      "unique_id": "test.sgfood.source_not_null_sgfood_raw_venta_detalle__source_row.4205f63364",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.0903468132019043
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_categoria__source_row.7b23492046",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04731273651123047
+      "execution_time": 0.07401037216186523
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_cliente__source_row.77b8f4073c",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.047768354415893555
+      "execution_time": 0.06807351112365723
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_devoluciones__source_row.5e6c6fb322",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.047635793685913086
+      "execution_time": 0.06339097023010254
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_inventario_bodega__source_row.5bb7b0fbb8",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04799938201904297
+      "execution_time": 0.0676734447479248
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_marca__source_row.0a6dcaa4e6",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.046480655670166016
+      "execution_time": 0.06790995597839355
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_metas_ventas__source_row.b72bc025cf",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.0472104549407959
+      "execution_time": 0.08784270286560059
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_producto__source_row.221e2898cb",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.047263383865356445
+      "execution_time": 0.07854390144348145
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_promociones__source_row.7e92c45a24",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.047327280044555664
+      "execution_time": 0.0722343921661377
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_proveedores_precios__source_row.0be5e09e8e",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05351519584655762
+      "execution_time": 0.08110618591308594
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_sucursal__source_row.a9825f82c7",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04222822189331055
-    },
-    {
-      "unique_id": "test.sgfood.source_unique_sgfood_raw_venta_detalle__source_row.c90759c15a",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04141712188720703
+      "execution_time": 0.10240316390991211
     },
     {
       "unique_id": "test.sgfood.source_unique_sgfood_raw_venta__source_row.e65651abd7",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04296588897705078
+      "execution_time": 0.07833409309387207
     },
     {
-      "unique_id": "model.sgfood.stg_inventario_bodega",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.1309053897857666
-    },
-    {
-      "unique_id": "model.sgfood.stg_cliente",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.13262438774108887
+      "unique_id": "test.sgfood.source_unique_sgfood_raw_venta_detalle__source_row.c90759c15a",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08735275268554688
     },
     {
       "unique_id": "model.sgfood.stg_categoria",
       "status": "success",
       "failures": null,
-      "execution_time": 0.1391761302947998
+      "execution_time": 0.24020028114318848
+    },
+    {
+      "unique_id": "model.sgfood.stg_cliente",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.1250460147857666
     },
     {
       "unique_id": "model.sgfood.stg_devoluciones",
       "status": "success",
       "failures": null,
-      "execution_time": 0.13901591300964355
+      "execution_time": 0.11893033981323242
     },
     {
-      "unique_id": "model.sgfood.stg_metas_ventas",
+      "unique_id": "model.sgfood.stg_inventario_bodega",
       "status": "success",
       "failures": null,
-      "execution_time": 0.0922844409942627
+      "execution_time": 0.11920738220214844
     },
     {
       "unique_id": "model.sgfood.stg_marca",
       "status": "success",
       "failures": null,
-      "execution_time": 0.09635162353515625
+      "execution_time": 0.15739750862121582
+    },
+    {
+      "unique_id": "model.sgfood.stg_metas_ventas",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.12003040313720703
     },
     {
       "unique_id": "model.sgfood.stg_producto",
       "status": "success",
       "failures": null,
-      "execution_time": 0.09027314186096191
+      "execution_time": 0.13576745986938477
     },
     {
       "unique_id": "model.sgfood.stg_promociones",
       "status": "success",
       "failures": null,
-      "execution_time": 0.0900578498840332
+      "execution_time": 0.10142803192138672
     },
     {
       "unique_id": "model.sgfood.stg_proveedores_precios",
       "status": "success",
       "failures": null,
-      "execution_time": 0.09899711608886719
-    },
-    {
-      "unique_id": "model.sgfood.stg_venta_detalle",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.09552907943725586
+      "execution_time": 0.17489218711853027
     },
     {
       "unique_id": "model.sgfood.stg_sucursal",
       "status": "success",
       "failures": null,
-      "execution_time": 0.10436415672302246
+      "execution_time": 0.11202096939086914
     },
     {
       "unique_id": "model.sgfood.stg_venta",
       "status": "success",
       "failures": null,
-      "execution_time": 0.10038113594055176
+      "execution_time": 0.1216285228729248
     },
     {
-      "unique_id": "test.sgfood.inventario_grano",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.041660308837890625
+      "unique_id": "model.sgfood.stg_venta_detalle",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.12762689590454102
     },
     {
       "unique_id": "test.sgfood.cliente_id_no_nulo",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.03523731231689453
+      "execution_time": 0.06640219688415527
     },
     {
       "unique_id": "test.sgfood.devoluciones_id_unico",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.0375516414642334
+      "execution_time": 0.06256771087646484
+    },
+    {
+      "unique_id": "test.sgfood.inventario_grano",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07507896423339844
     },
     {
       "unique_id": "test.sgfood.inventario_rangos",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.047739505767822266
-    },
-    {
-      "unique_id": "test.sgfood.producto_rangos",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.045987844467163086
+      "execution_time": 0.10723090171813965
     },
     {
       "unique_id": "test.sgfood.metas_rangos",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05089402198791504
+      "execution_time": 0.07474851608276367
     },
     {
-      "unique_id": "test.sgfood.proveedor_consistente",
+      "unique_id": "test.sgfood.producto_rangos",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.038611650466918945
+      "execution_time": 0.06626272201538086
     },
     {
       "unique_id": "test.sgfood.promociones_rangos",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04449033737182617
+      "execution_time": 0.07379913330078125
+    },
+    {
+      "unique_id": "test.sgfood.proveedor_consistente",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07320165634155273
     },
     {
       "unique_id": "test.sgfood.proveedor_rangos",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05361199378967285
-    },
-    {
-      "unique_id": "test.sgfood.venta_producto_unico",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.058286190032958984
-    },
-    {
-      "unique_id": "test.sgfood.ventas_subtotal",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.0579833984375
+      "execution_time": 0.060869455337524414
     },
     {
       "unique_id": "model.sgfood.dim_sucursal",
       "status": "success",
       "failures": null,
-      "execution_time": 0.155470609664917
-    },
-    {
-      "unique_id": "test.sgfood.staging_integridad",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.1177210807800293
+      "execution_time": 0.1489241123199463
     },
     {
       "unique_id": "model.sgfood.dim_canal",
       "status": "success",
       "failures": null,
-      "execution_time": 0.14250397682189941
+      "execution_time": 0.12567472457885742
     },
     {
       "unique_id": "model.sgfood.dim_pago",
       "status": "success",
       "failures": null,
-      "execution_time": 0.14825987815856934
+      "execution_time": 0.13072705268859863
+    },
+    {
+      "unique_id": "test.sgfood.staging_integridad",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08777451515197754
+    },
+    {
+      "unique_id": "test.sgfood.venta_producto_unico",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06722283363342285
+    },
+    {
+      "unique_id": "test.sgfood.ventas_subtotal",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.09307503700256348
     },
     {
       "unique_id": "model.sgfood.dim_cliente",
       "status": "success",
       "failures": null,
-      "execution_time": 0.08847570419311523
+      "execution_time": 0.1471555233001709
     },
     {
       "unique_id": "model.sgfood.fact_metas",
       "status": "success",
       "failures": null,
-      "execution_time": 0.08396220207214355
+      "execution_time": 0.11585497856140137
     },
     {
       "unique_id": "model.sgfood.dim_producto",
       "status": "success",
       "failures": null,
-      "execution_time": 0.11806678771972656
+      "execution_time": 0.12016987800598145
     },
     {
       "unique_id": "model.sgfood.fact_inventario",
       "status": "success",
       "failures": null,
-      "execution_time": 0.10914492607116699
+      "execution_time": 0.17139649391174316
     },
     {
       "unique_id": "model.sgfood.dim_promocion",
       "status": "success",
       "failures": null,
-      "execution_time": 0.10176897048950195
-    },
-    {
-      "unique_id": "model.sgfood.fact_proveedor_precio",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.0797569751739502
-    },
-    {
-      "unique_id": "model.sgfood.dim_proveedor",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.09688282012939453
+      "execution_time": 0.11260032653808594
     },
     {
       "unique_id": "model.sgfood.dim_fecha",
       "status": "success",
       "failures": null,
-      "execution_time": 0.10138893127441406
+      "execution_time": 0.12028884887695312
+    },
+    {
+      "unique_id": "model.sgfood.dim_proveedor",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.1287240982055664
+    },
+    {
+      "unique_id": "model.sgfood.fact_proveedor_precio",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.1100311279296875
     },
     {
       "unique_id": "test.sgfood.not_null_dim_sucursal_sucursal_key.b3237ee22e",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04248166084289551
+      "execution_time": 0.06683015823364258
     },
     {
       "unique_id": "test.sgfood.unique_dim_sucursal_sucursal_key.d372dacdac",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.044193267822265625
+      "execution_time": 0.06473803520202637
     },
     {
       "unique_id": "test.sgfood.not_null_dim_canal_canal_key.60af84f3bf",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04228329658508301
+      "execution_time": 0.06698083877563477
     },
     {
       "unique_id": "test.sgfood.unique_dim_canal_canal_key.22ba66e5db",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.03445792198181152
+      "execution_time": 0.06263995170593262
     },
     {
       "unique_id": "test.sgfood.not_null_dim_pago_pago_key.1a9bf7db34",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.035180091857910156
+      "execution_time": 0.06293201446533203
     },
     {
       "unique_id": "test.sgfood.unique_dim_pago_pago_key.e7056d323c",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.035761356353759766
-    },
-    {
-      "unique_id": "test.sgfood.not_null_dim_cliente_cliente_key.bf842e4204",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.039691925048828125
-    },
-    {
-      "unique_id": "test.sgfood.unique_dim_cliente_cliente_key.7712c8e038",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03363490104675293
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_metas_fecha_key.cd8dbfa064",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03329658508300781
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_metas_meta_key.7f130094d1",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03875303268432617
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_metas_sucursal_key.6ddc3e6f8b",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.0391085147857666
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_metas_sucursal_key__sucursal_key__ref_dim_sucursal_.14e38a8493",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03928661346435547
-    },
-    {
-      "unique_id": "test.sgfood.unique_fact_metas_meta_key.0564c731ed",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04115867614746094
-    },
-    {
-      "unique_id": "test.sgfood.not_null_dim_producto_producto_key.1505c754b2",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03762412071228027
-    },
-    {
-      "unique_id": "test.sgfood.unique_dim_producto_producto_key.dd24a25833",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.035594940185546875
-    },
-    {
-      "unique_id": "test.sgfood.fact_inventario_conteo",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03394293785095215
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_inventario_fecha_key.9f694acf2d",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03444170951843262
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_inventario_inventario_key.5cbcd13e09",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.033835411071777344
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_inventario_producto_key.2dce903c50",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03767514228820801
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_inventario_sucursal_key.b12fe30507",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03397989273071289
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_inventario_vencimiento_fecha_key.92a8483f65",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.033753156661987305
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_inventario_producto_key__producto_key__ref_dim_producto_.bfb701d73c",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03913068771362305
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_inventario_sucursal_key__sucursal_key__ref_dim_sucursal_.da6990ff0b",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04446244239807129
-    },
-    {
-      "unique_id": "test.sgfood.unique_fact_inventario_inventario_key.775124ccf4",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04550480842590332
-    },
-    {
-      "unique_id": "test.sgfood.not_null_dim_promocion_promocion_key.f31fcb758e",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03793668746948242
-    },
-    {
-      "unique_id": "test.sgfood.unique_dim_promocion_promocion_key.c2caf1c913",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03466081619262695
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_fecha_key.3c73b98e83",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03477072715759277
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_precio_key.0c040f3b35",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.035770416259765625
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_producto_key.b4de904352",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03194093704223633
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_proveedor_key.2b23c4d3f1",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03464317321777344
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_proveedor_precio_producto_key__producto_key__ref_dim_producto_.cee99b5632",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.038190364837646484
-    },
-    {
-      "unique_id": "test.sgfood.not_null_dim_proveedor_proveedor_key.a6f45a66e2",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.0302278995513916
-    },
-    {
-      "unique_id": "test.sgfood.unique_fact_proveedor_precio_precio_key.70a95ba81a",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03663897514343262
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_proveedor_precio_proveedor_key__proveedor_key__ref_dim_proveedor_.2637c5c8a7",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04300212860107422
-    },
-    {
-      "unique_id": "test.sgfood.not_null_dim_fecha_fecha_key.87ee199893",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.045690298080444336
-    },
-    {
-      "unique_id": "test.sgfood.unique_dim_proveedor_proveedor_key.5280dc93a7",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.05129361152648926
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_inventario_fecha_key__fecha_key__ref_dim_fecha_.d94765fb8a",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04021024703979492
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_inventario_vencimiento_fecha_key__fecha_key__ref_dim_fecha_.0cca8103cc",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03608369827270508
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_metas_fecha_key__fecha_key__ref_dim_fecha_.c8b86f235e",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.03624415397644043
+      "execution_time": 0.06284761428833008
     },
     {
       "unique_id": "model.sgfood.int_ventas",
       "status": "success",
       "failures": null,
-      "execution_time": 0.08635282516479492
+      "execution_time": 0.10066413879394531
+    },
+    {
+      "unique_id": "test.sgfood.not_null_dim_cliente_cliente_key.bf842e4204",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07860612869262695
+    },
+    {
+      "unique_id": "test.sgfood.unique_dim_cliente_cliente_key.7712c8e038",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07924437522888184
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_metas_fecha_key.cd8dbfa064",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07789278030395508
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_metas_meta_key.7f130094d1",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07969117164611816
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_metas_sucursal_key.6ddc3e6f8b",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.17050909996032715
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_metas_sucursal_key__sucursal_key__ref_dim_sucursal_.14e38a8493",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.09152722358703613
+    },
+    {
+      "unique_id": "test.sgfood.unique_fact_metas_meta_key.0564c731ed",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06549453735351562
+    },
+    {
+      "unique_id": "test.sgfood.not_null_dim_producto_producto_key.1505c754b2",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06264328956604004
+    },
+    {
+      "unique_id": "test.sgfood.unique_dim_producto_producto_key.dd24a25833",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.0649261474609375
+    },
+    {
+      "unique_id": "test.sgfood.fact_inventario_conteo",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06155061721801758
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_inventario_fecha_key.9f694acf2d",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07249212265014648
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_inventario_inventario_key.5cbcd13e09",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06880974769592285
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_inventario_producto_key.2dce903c50",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06532549858093262
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_inventario_sucursal_key.b12fe30507",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06423521041870117
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_inventario_vencimiento_fecha_key.92a8483f65",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06573200225830078
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_inventario_producto_key__producto_key__ref_dim_producto_.bfb701d73c",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07361578941345215
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_inventario_sucursal_key__sucursal_key__ref_dim_sucursal_.da6990ff0b",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07414817810058594
+    },
+    {
+      "unique_id": "test.sgfood.unique_fact_inventario_inventario_key.775124ccf4",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.0833590030670166
+    },
+    {
+      "unique_id": "test.sgfood.not_null_dim_promocion_promocion_key.f31fcb758e",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.10188126564025879
+    },
+    {
+      "unique_id": "test.sgfood.unique_dim_promocion_promocion_key.c2caf1c913",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.09229803085327148
+    },
+    {
+      "unique_id": "test.sgfood.not_null_dim_fecha_fecha_key.87ee199893",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.0893552303314209
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_inventario_fecha_key__fecha_key__ref_dim_fecha_.d94765fb8a",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08250546455383301
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_inventario_vencimiento_fecha_key__fecha_key__ref_dim_fecha_.0cca8103cc",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07803606986999512
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_metas_fecha_key__fecha_key__ref_dim_fecha_.c8b86f235e",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08398032188415527
     },
     {
       "unique_id": "test.sgfood.unique_dim_fecha_fecha_key.314389aacd",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04201054573059082
+      "execution_time": 0.06775641441345215
+    },
+    {
+      "unique_id": "test.sgfood.not_null_dim_proveedor_proveedor_key.a6f45a66e2",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.0746450424194336
+    },
+    {
+      "unique_id": "test.sgfood.unique_dim_proveedor_proveedor_key.5280dc93a7",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.0810093879699707
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_fecha_key.3c73b98e83",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07586431503295898
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_precio_key.0c040f3b35",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07457756996154785
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_producto_key.b4de904352",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07269811630249023
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_proveedor_precio_proveedor_key.2b23c4d3f1",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.08273649215698242
     },
     {
       "unique_id": "test.sgfood.relationships_fact_proveedor_precio_fecha_key__fecha_key__ref_dim_fecha_.9deec9d9b5",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04958009719848633
+      "execution_time": 0.09202027320861816
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_proveedor_precio_producto_key__producto_key__ref_dim_producto_.cee99b5632",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07265305519104004
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_proveedor_precio_proveedor_key__proveedor_key__ref_dim_proveedor_.2637c5c8a7",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.1355118751525879
+    },
+    {
+      "unique_id": "test.sgfood.unique_fact_proveedor_precio_precio_key.70a95ba81a",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.14712834358215332
     },
     {
       "unique_id": "model.sgfood.bridge_promocion_venta",
       "status": "success",
       "failures": null,
-      "execution_time": 0.08685827255249023
-    },
-    {
-      "unique_id": "model.sgfood.int_devoluciones",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.07895612716674805
-    },
-    {
-      "unique_id": "model.sgfood.rpt_inventario_actual",
-      "status": "success",
-      "failures": null,
-      "execution_time": 0.09650993347167969
+      "execution_time": 0.18922686576843262
     },
     {
       "unique_id": "model.sgfood.fact_ventas",
       "status": "success",
       "failures": null,
-      "execution_time": 0.1466503143310547
+      "execution_time": 0.1639552116394043
+    },
+    {
+      "unique_id": "model.sgfood.int_devoluciones",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.09706473350524902
+    },
+    {
+      "unique_id": "model.sgfood.rpt_inventario_actual",
+      "status": "success",
+      "failures": null,
+      "execution_time": 0.11270737648010254
     },
     {
       "unique_id": "test.sgfood.bridge_grano",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.06430411338806152
-    },
-    {
-      "unique_id": "test.sgfood.not_null_bridge_promocion_venta_venta_key.e0fa9aee87",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04268813133239746
+      "execution_time": 0.06047558784484863
     },
     {
       "unique_id": "test.sgfood.not_null_bridge_promocion_venta_promocion_key.881af824a7",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05849885940551758
+      "execution_time": 0.06255888938903809
+    },
+    {
+      "unique_id": "test.sgfood.not_null_bridge_promocion_venta_venta_key.e0fa9aee87",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07222175598144531
     },
     {
       "unique_id": "test.sgfood.relationships_bridge_promocion_venta_promocion_key__promocion_key__ref_dim_promocion_.25e955ec4b",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.056450843811035156
-    },
-    {
-      "unique_id": "test.sgfood.fact_ventas_conteo",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.053514957427978516
+      "execution_time": 0.07526659965515137
     },
     {
       "unique_id": "test.sgfood.accepted_values_fact_ventas_estado__COMPLETADA__PENDIENTE__ANULADA.fd7e16721a",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.056333065032958984
+      "execution_time": 0.0852043628692627
     },
     {
-      "unique_id": "test.sgfood.devoluciones_invalidas",
+      "unique_id": "test.sgfood.fact_ventas_conteo",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.09302115440368652
+      "execution_time": 0.1650540828704834
     },
     {
       "unique_id": "test.sgfood.not_null_fact_ventas_canal_key.c87b535d28",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.0583653450012207
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_ventas_fecha_key.92d29eef67",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.049520015716552734
+      "execution_time": 0.06788945198059082
     },
     {
       "unique_id": "test.sgfood.not_null_fact_ventas_cliente_key.24c30042a2",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05915403366088867
+      "execution_time": 0.0687408447265625
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_ventas_fecha_key.92d29eef67",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06596803665161133
     },
     {
       "unique_id": "test.sgfood.not_null_fact_ventas_pago_key.c82148b37b",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.059129953384399414
+      "execution_time": 0.06608009338378906
     },
     {
       "unique_id": "test.sgfood.not_null_fact_ventas_producto_key.d068bd5a2c",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04925823211669922
+      "execution_time": 0.06614494323730469
     },
     {
       "unique_id": "test.sgfood.not_null_fact_ventas_sucursal_key.d64a565263",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.054314613342285156
+      "execution_time": 0.06341052055358887
     },
     {
       "unique_id": "test.sgfood.not_null_fact_ventas_venta_key.d75c6ed744",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.0560755729675293
+      "execution_time": 0.06960010528564453
     },
     {
       "unique_id": "test.sgfood.relationships_bridge_promocion_venta_venta_key__venta_key__ref_fact_ventas_.d44ec30944",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05152559280395508
+      "execution_time": 0.07410573959350586
     },
     {
       "unique_id": "test.sgfood.relationships_fact_ventas_canal_key__canal_key__ref_dim_canal_.5b6fbfd8cf",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05155682563781738
+      "execution_time": 0.0856328010559082
     },
     {
       "unique_id": "test.sgfood.relationships_fact_ventas_cliente_key__cliente_key__ref_dim_cliente_.d92c365183",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.04460000991821289
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04934334754943848
+      "execution_time": 0.0841524600982666
     },
     {
       "unique_id": "test.sgfood.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05999875068664551
+      "execution_time": 0.07255935668945312
     },
     {
       "unique_id": "test.sgfood.relationships_fact_ventas_pago_key__pago_key__ref_dim_pago_.6a8b8e24ad",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05328202247619629
+      "execution_time": 0.08482670783996582
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.10470008850097656
     },
     {
       "unique_id": "test.sgfood.relationships_fact_ventas_sucursal_key__sucursal_key__ref_dim_sucursal_.10799c03e8",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.08114790916442871
+      "execution_time": 0.0765230655670166
     },
     {
       "unique_id": "test.sgfood.unique_fact_ventas_venta_key.38606a467c",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.06896066665649414
+      "execution_time": 0.06810474395751953
+    },
+    {
+      "unique_id": "test.sgfood.devoluciones_invalidas",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.1865062713623047
     },
     {
       "unique_id": "model.sgfood.fact_devoluciones",
       "status": "success",
       "failures": null,
-      "execution_time": 0.10473084449768066
-    },
-    {
-      "unique_id": "test.sgfood.relationships_fact_devoluciones_cliente_key__cliente_key__ref_dim_cliente_.f8c7cd5084",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.04268765449523926
-    },
-    {
-      "unique_id": "test.sgfood.not_null_fact_devoluciones_fecha_key.4f0d8cc512",
-      "status": "pass",
-      "failures": 0,
-      "execution_time": 0.05769205093383789
+      "execution_time": 0.2584724426269531
     },
     {
       "unique_id": "test.sgfood.not_null_fact_devoluciones_devolucion_key.ed9a59b925",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.05879402160644531
+      "execution_time": 0.06471538543701172
+    },
+    {
+      "unique_id": "test.sgfood.not_null_fact_devoluciones_fecha_key.4f0d8cc512",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.07187128067016602
     },
     {
       "unique_id": "test.sgfood.not_null_fact_devoluciones_producto_key.6836504e85",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.058602333068847656
+      "execution_time": 0.06486749649047852
+    },
+    {
+      "unique_id": "test.sgfood.relationships_fact_devoluciones_cliente_key__cliente_key__ref_dim_cliente_.f8c7cd5084",
+      "status": "pass",
+      "failures": 0,
+      "execution_time": 0.06646966934204102
     },
     {
       "unique_id": "test.sgfood.relationships_fact_devoluciones_fecha_key__fecha_key__ref_dim_fecha_.daf4a77ecc",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.11695361137390137
+      "execution_time": 0.06643319129943848
     },
     {
       "unique_id": "test.sgfood.relationships_fact_devoluciones_producto_key__producto_key__ref_dim_producto_.0c9b80f0fb",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.10861730575561523
+      "execution_time": 0.06546401977539062
     },
     {
       "unique_id": "test.sgfood.relationships_fact_devoluciones_sucursal_key__sucursal_key__ref_dim_sucursal_.35db854697",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.11071348190307617
+      "execution_time": 0.0705418586730957
     },
     {
       "unique_id": "test.sgfood.unique_fact_devoluciones_devolucion_key.ef40ca1516",
       "status": "pass",
       "failures": 0,
-      "execution_time": 0.11207914352416992
+      "execution_time": 0.0669715404510498
     },
     {
       "unique_id": "model.sgfood.rpt_calidad_devoluciones",
       "status": "success",
       "failures": null,
-      "execution_time": 0.05970144271850586
+      "execution_time": 0.11493277549743652
     },
     {
       "unique_id": "model.sgfood.rpt_ventas_mensuales",
       "status": "success",
       "failures": null,
-      "execution_time": 0.062441349029541016
+      "execution_time": 0.12054920196533203
     }
   ]
 }
