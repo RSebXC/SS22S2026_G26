@@ -1,537 +1,304 @@
-{
-  "version": 2,
-  "models": [
-    {
-      "name": "dim_fecha",
-      "description": "Modelo dim_fecha del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "fecha_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_producto",
-      "description": "Modelo dim_producto del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "producto_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_cliente",
-      "description": "Modelo dim_cliente del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "cliente_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_sucursal",
-      "description": "Modelo dim_sucursal del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "sucursal_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_canal",
-      "description": "Modelo dim_canal del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "canal_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_pago",
-      "description": "Modelo dim_pago del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "pago_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_proveedor",
-      "description": "Modelo dim_proveedor del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "proveedor_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "dim_promocion",
-      "description": "Modelo dim_promocion del Data Warehouse SG-Food.",
-      "columns": [
-        {
-          "name": "promocion_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "fact_ventas",
-      "description": "Una línea original de venta. Importe neto vendido excluye estados distintos de COMPLETADA; margen usa costo_base de referencia y no representa utilidad contable.",
-      "columns": [
-        {
-          "name": "venta_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        },
-        {
-          "name": "fecha_key",
-          "description": "Relación con dim_fecha.fecha_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_fecha')",
-                  "field": "fecha_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "producto_key",
-          "description": "Relación con dim_producto.producto_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_producto')",
-                  "field": "producto_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "cliente_key",
-          "description": "Relación con dim_cliente.cliente_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_cliente')",
-                  "field": "cliente_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "sucursal_key",
-          "description": "Relación con dim_sucursal.sucursal_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_sucursal')",
-                  "field": "sucursal_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "canal_key",
-          "description": "Relación con dim_canal.canal_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_canal')",
-                  "field": "canal_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "pago_key",
-          "description": "Relación con dim_pago.pago_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_pago')",
-                  "field": "pago_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "estado",
-          "data_tests": [
-            {
-              "accepted_values": {
-                "arguments": {
-                  "values": [
-                    "COMPLETADA",
-                    "PENDIENTE",
-                    "ANULADA"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "fact_inventario",
-      "description": "Un corte por fecha, sucursal, producto y lote. Existencias semiaditivas: nunca sumar entre cortes mensuales.",
-      "columns": [
-        {
-          "name": "inventario_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        },
-        {
-          "name": "fecha_key",
-          "description": "Relación con dim_fecha.fecha_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_fecha')",
-                  "field": "fecha_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "vencimiento_fecha_key",
-          "description": "Relación con dim_fecha.fecha_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_fecha')",
-                  "field": "fecha_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "producto_key",
-          "description": "Relación con dim_producto.producto_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_producto')",
-                  "field": "producto_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "sucursal_key",
-          "description": "Relación con dim_sucursal.sucursal_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_sucursal')",
-                  "field": "sucursal_key"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "fact_devoluciones",
-      "description": "Una devolución original con diagnóstico. Importe estimado proporcional al neto de la línea origen; solo las válidas afectan métricas.",
-      "columns": [
-        {
-          "name": "devolucion_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        },
-        {
-          "name": "fecha_key",
-          "description": "Relación con dim_fecha.fecha_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_fecha')",
-                  "field": "fecha_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "producto_key",
-          "description": "Relación con dim_producto.producto_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_producto')",
-                  "field": "producto_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "cliente_key",
-          "description": "Relación con dim_cliente.cliente_key",
-          "data_tests": [
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_cliente')",
-                  "field": "cliente_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "sucursal_key",
-          "description": "Relación con dim_sucursal.sucursal_key",
-          "data_tests": [
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_sucursal')",
-                  "field": "sucursal_key"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "fact_metas",
-      "description": "Una meta mensual por sucursal; comparar con ventas completadas, antes de devoluciones.",
-      "columns": [
-        {
-          "name": "meta_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        },
-        {
-          "name": "fecha_key",
-          "description": "Relación con dim_fecha.fecha_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_fecha')",
-                  "field": "fecha_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "sucursal_key",
-          "description": "Relación con dim_sucursal.sucursal_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_sucursal')",
-                  "field": "sucursal_key"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "fact_proveedor_precio",
-      "description": "Una cotización por proveedor, producto y fecha de vigencia. No es evidencia de compras reales.",
-      "columns": [
-        {
-          "name": "precio_key",
-          "description": "Clave estable al grano documentado.",
-          "data_tests": [
-            "not_null",
-            "unique"
-          ]
-        },
-        {
-          "name": "fecha_key",
-          "description": "Relación con dim_fecha.fecha_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_fecha')",
-                  "field": "fecha_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "producto_key",
-          "description": "Relación con dim_producto.producto_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_producto')",
-                  "field": "producto_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "proveedor_key",
-          "description": "Relación con dim_proveedor.proveedor_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_proveedor')",
-                  "field": "proveedor_key"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "bridge_promocion_venta",
-      "description": "Coincidencia por categoría y fechas; elegibilidad potencial, sin atribución causal ni ajuste adicional del descuento.",
-      "columns": [
-        {
-          "name": "venta_key",
-          "description": "Relación con fact_ventas.venta_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('fact_ventas')",
-                  "field": "venta_key"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "promocion_key",
-          "description": "Relación con dim_promocion.promocion_key",
-          "data_tests": [
-            "not_null",
-            {
-              "relationships": {
-                "arguments": {
-                  "to": "ref('dim_promocion')",
-                  "field": "promocion_key"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "rpt_ventas_mensuales",
-      "description": "Una fila por mes y sucursal. Devoluciones reconocidas en su fecha; hechos agregados por separado para evitar fanout.",
-      "columns": []
-    },
-    {
-      "name": "rpt_inventario_actual",
-      "description": "Último corte disponible del dataset, independiente de la fecha del equipo.",
-      "columns": []
-    },
-    {
-      "name": "rpt_calidad_devoluciones",
-      "description": "Modelo rpt_calidad_devoluciones del Data Warehouse SG-Food.",
-      "columns": []
-    }
-  ]
-}
+version: 2
+
+models:
+  - name: dim_fecha
+    description: Calendario diario desde la fecha mínima hasta la máxima de todas las fuentes.
+    columns:
+      - name: fecha_key
+        description: Fecha en formato AAAAMMDD.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_producto
+    description: Producto con su categoría y marca.
+    columns:
+      - name: producto_key
+        description: Identificador del producto en la fuente.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_cliente
+    description: Cliente del sistema transaccional.
+    columns:
+      - name: cliente_key
+        description: Identificador del cliente en la fuente.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_sucursal
+    description: Sucursal de SG-Food.
+    columns:
+      - name: sucursal_key
+        description: Identificador de la sucursal en la fuente.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_canal
+    description: Canal de venta.
+    columns:
+      - name: canal_key
+        description: Hash MD5 del nombre del canal.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_pago
+    description: Método de pago.
+    columns:
+      - name: pago_key
+        description: Hash MD5 del método de pago.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_proveedor
+    description: Proveedor que aparece en las cotizaciones.
+    columns:
+      - name: proveedor_key
+        description: Identificador del proveedor en el CSV.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_promocion
+    description: Promoción comercial por categoría y vigencia.
+    columns:
+      - name: promocion_key
+        description: Identificador de la promoción en el CSV.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: fact_ventas
+    description: Una línea original de venta. Importe neto vendido excluye estados distintos de COMPLETADA; margen usa costo_base de referencia y no representa utilidad contable.
+    columns:
+      - name: venta_key
+        description: Identificador de la línea de venta (id_detalle).
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha_key
+        description: Llave foránea a dim_fecha.fecha_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_fecha')"
+                field: fecha_key
+      - name: producto_key
+        description: Llave foránea a dim_producto.producto_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_producto')"
+                field: producto_key
+      - name: cliente_key
+        description: Llave foránea a dim_cliente.cliente_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_cliente')"
+                field: cliente_key
+      - name: sucursal_key
+        description: Llave foránea a dim_sucursal.sucursal_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_sucursal')"
+                field: sucursal_key
+      - name: canal_key
+        description: Llave foránea a dim_canal.canal_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_canal')"
+                field: canal_key
+      - name: pago_key
+        description: Llave foránea a dim_pago.pago_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_pago')"
+                field: pago_key
+      - name: estado
+        description: 'Estado de la venta: COMPLETADA, PENDIENTE o ANULADA.'
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [COMPLETADA, PENDIENTE, ANULADA]
+
+  - name: fact_inventario
+    description: 'Un corte por fecha, sucursal, producto y lote. Existencias semiaditivas: nunca sumar entre cortes mensuales.'
+    columns:
+      - name: inventario_key
+        description: Hash MD5 de fecha de corte, sucursal, producto y lote.
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha_key
+        description: Llave foránea a dim_fecha.fecha_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_fecha')"
+                field: fecha_key
+      - name: vencimiento_fecha_key
+        description: Llave foránea a dim_fecha.fecha_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_fecha')"
+                field: fecha_key
+      - name: producto_key
+        description: Llave foránea a dim_producto.producto_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_producto')"
+                field: producto_key
+      - name: sucursal_key
+        description: Llave foránea a dim_sucursal.sucursal_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_sucursal')"
+                field: sucursal_key
+
+  - name: fact_devoluciones
+    description: Una devolución original con diagnóstico. Importe estimado proporcional al neto de la línea origen; solo las válidas afectan métricas.
+    columns:
+      - name: devolucion_key
+        description: Identificador de la devolución.
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha_key
+        description: Llave foránea a dim_fecha.fecha_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_fecha')"
+                field: fecha_key
+      - name: producto_key
+        description: Llave foránea a dim_producto.producto_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_producto')"
+                field: producto_key
+      - name: cliente_key
+        description: Llave foránea a dim_cliente.cliente_key.
+        data_tests:
+          - relationships:
+              arguments:
+                to: "ref('dim_cliente')"
+                field: cliente_key
+      - name: sucursal_key
+        description: Llave foránea a dim_sucursal.sucursal_key.
+        data_tests:
+          - relationships:
+              arguments:
+                to: "ref('dim_sucursal')"
+                field: sucursal_key
+
+  - name: fact_metas
+    description: Una meta mensual por sucursal; comparar con ventas completadas, antes de devoluciones.
+    columns:
+      - name: meta_key
+        description: Hash MD5 de período y sucursal.
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha_key
+        description: Llave foránea a dim_fecha.fecha_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_fecha')"
+                field: fecha_key
+      - name: sucursal_key
+        description: Llave foránea a dim_sucursal.sucursal_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_sucursal')"
+                field: sucursal_key
+
+  - name: fact_proveedor_precio
+    description: Una cotización por proveedor, producto y fecha de vigencia. No es evidencia de compras reales.
+    columns:
+      - name: precio_key
+        description: Hash MD5 de proveedor, producto y fecha de vigencia.
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha_key
+        description: Llave foránea a dim_fecha.fecha_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_fecha')"
+                field: fecha_key
+      - name: producto_key
+        description: Llave foránea a dim_producto.producto_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_producto')"
+                field: producto_key
+      - name: proveedor_key
+        description: Llave foránea a dim_proveedor.proveedor_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_proveedor')"
+                field: proveedor_key
+
+  - name: bridge_promocion_venta
+    description: Coincidencia por categoría y fechas; elegibilidad potencial, sin atribución causal ni ajuste adicional del descuento.
+    columns:
+      - name: venta_key
+        description: Identificador de la línea de venta (id_detalle).
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('fact_ventas')"
+                field: venta_key
+      - name: promocion_key
+        description: Llave foránea a dim_promocion.promocion_key.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: "ref('dim_promocion')"
+                field: promocion_key
+
+  - name: rpt_ventas_mensuales
+    description: Una fila por mes y sucursal. Devoluciones reconocidas en su fecha; hechos agregados por separado para evitar fanout.
+
+  - name: rpt_inventario_actual
+    description: Último corte disponible del dataset, independiente de la fecha del equipo.
+
+  - name: rpt_calidad_devoluciones
+    description: Conteo de devoluciones y unidades según el resultado de su validación.

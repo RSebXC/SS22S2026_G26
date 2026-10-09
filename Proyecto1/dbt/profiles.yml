@@ -9,5 +9,6 @@ sgfood:
       password: "{{ env_var('DBT_PASSWORD') }}"
       dbname: "{{ env_var('DBT_DATABASE', 'sgfood_dw') }}"
       schema: marts
-      threads: 4
+      # Un hilo: las FK físicas de marts provocan deadlocks al reconstruir tablas en paralelo.
+      threads: 1
       connect_timeout: 15
