@@ -1,0 +1,240 @@
+{
+  "version": 2,
+  "sources": [
+    {
+      "name": "sgfood_raw",
+      "schema": "raw",
+      "description": "Snapshot de la BD transaccional y de los CSV originales; cargado atómicamente por Python.",
+      "tables": [
+        {
+          "name": "sucursal",
+          "description": "Fuente original de sucursal; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "categoria",
+          "description": "Fuente original de categoria; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "marca",
+          "description": "Fuente original de marca; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "producto",
+          "description": "Fuente original de producto; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cliente",
+          "description": "Fuente original de cliente; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "venta",
+          "description": "Fuente original de venta; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "venta_detalle",
+          "description": "Fuente original de venta_detalle; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "inventario_bodega",
+          "description": "Fuente original de inventario_bodega; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "proveedores_precios",
+          "description": "Fuente original de proveedores_precios; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "promociones",
+          "description": "Fuente original de promociones; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "metas_ventas",
+          "description": "Fuente original de metas_ventas; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "devoluciones",
+          "description": "Fuente original de devoluciones; conservar su grano y metadatos.",
+          "columns": [
+            {
+              "name": "_batch_id",
+              "data_tests": [
+                "not_null"
+              ]
+            },
+            {
+              "name": "_source_row",
+              "data_tests": [
+                "not_null",
+                "unique"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

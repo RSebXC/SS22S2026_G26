@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+airflow/logs/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+# Los insumos del curso son ficticios y se incluyen para reproducibilidad.
+data/exports/
+evidence/*_local.log
+gunicorn.ctl
+dbt/.user.yml

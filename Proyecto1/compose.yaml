@@ -1,0 +1,81 @@
+name: sgfood-proyecto1
+
+x-pipeline: &pipeline
+  build: .
+  image: sgfood-proyecto1:local
+  environment: &pipeline-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://sgfood:${POSTGRES_PASSWORD}@postgres:5432/airflow_meta
+    AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW_SECRET_KEY}
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY}
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'false'
+    SOURCE_DSN: postgresql://sgfood:${POSTGRES_PASSWORD}@postgres:5432/sgfood_source
+    DW_DSN: postgresql://sgfood:${POSTGRES_PASSWORD}@postgres:5432/sgfood_dw
+    DBT_HOST: postgres
+    DBT_PORT: '5432'
+    DBT_USER: sgfood
+    DBT_PASSWORD: ${POSTGRES_PASSWORD}
+    DBT_DATABASE: sgfood_dw
+    DBT_PROFILES_DIR: /opt/project/dbt
+    PYTHONPATH: /opt/project
+    AIRFLOW_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
+    TZ: America/Guatemala
+  volumes:
+    - .:/opt/project
+    - ./airflow/dags:/opt/airflow/dags:ro
+    - airflow-logs:/opt/airflow/logs
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16.10
+    environment:
+      POSTGRES_USER: sgfood
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: sgfood_dw
+    ports:
+      - '127.0.0.1:55432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./sql/init_databases.sql:/docker-entrypoint-initdb.d/00_databases.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U sgfood -d sgfood_dw']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  pipeline:
+    <<: *pipeline
+    profiles: [tools]
+    entrypoint: []
+    command: ['python', '-m', 'src.pipeline', '--help']
+  airflow-init:
+    <<: *pipeline
+    entrypoint: []
+    command: ['python', '/opt/project/scripts/init_airflow.py']
+  airflow-webserver:
+    <<: *pipeline
+    command: webserver
+    ports:
+      - '127.0.0.1:8081:8080'
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ['CMD', 'curl', '--fail', 'http://localhost:8080/health']
+      interval: 15s
+      timeout: 10s
+      retries: 20
+  airflow-scheduler:
+    <<: *pipeline
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+volumes:
+  postgres-data:
+  airflow-logs:
